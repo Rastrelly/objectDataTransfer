@@ -1,0 +1,316 @@
+object Form1: TForm1
+  Left = 317
+  Height = 635
+  Top = 111
+  Width = 963
+  Caption = 'Form1'
+  ClientHeight = 635
+  ClientWidth = 963
+  OnCloseQuery = FormCloseQuery
+  OnCreate = FormCreate
+  LCLVersion = '3.2.0.0'
+  object Chart1: TChart
+    Left = 170
+    Height = 635
+    Top = 0
+    Width = 793
+    AxisList = <    
+      item
+        Marks.LabelBrush.Style = bsClear
+        Minors = <>
+        Title.LabelFont.Orientation = 900
+        Title.LabelBrush.Style = bsClear
+      end    
+      item
+        Alignment = calBottom
+        Marks.LabelBrush.Style = bsClear
+        Minors = <>
+        Title.LabelBrush.Style = bsClear
+      end>
+    Title.Text.Strings = (
+      'TAChart'
+    )
+    Align = alClient
+    object seriesSignal: TLineSeries
+      LinePen.Color = clRed
+      LinePen.Width = 2
+    end
+  end
+  object Panel1: TPanel
+    Left = 0
+    Height = 635
+    Top = 0
+    Width = 170
+    Align = alLeft
+    ClientHeight = 635
+    ClientWidth = 170
+    TabOrder = 1
+    object GroupBox1: TGroupBox
+      Left = 1
+      Height = 260
+      Top = 107
+      Width = 168
+      Align = alTop
+      AutoSize = True
+      Caption = 'Generator Setup'
+      ClientHeight = 240
+      ClientWidth = 164
+      TabOrder = 0
+      object cbGType: TComboBox
+        Left = 0
+        Height = 23
+        Top = 15
+        Width = 164
+        Align = alTop
+        ItemHeight = 15
+        ItemIndex = 0
+        Items.Strings = (
+          'Sin'
+          'Teeth'
+          'Saw'
+        )
+        Style = csDropDownList
+        TabOrder = 0
+        Text = 'Sin'
+      end
+      object Label1: TLabel
+        Left = 0
+        Height = 15
+        Top = 38
+        Width = 164
+        Align = alTop
+        Caption = 'Amplitude'
+      end
+      object edAmplitude: TEdit
+        Left = 0
+        Height = 23
+        Top = 53
+        Width = 164
+        Align = alTop
+        TabOrder = 1
+        Text = '10'
+      end
+      object Label2: TLabel
+        Left = 0
+        Height = 15
+        Top = 76
+        Width = 164
+        Align = alTop
+        Caption = 'Frequency1'
+      end
+      object edFreq1: TEdit
+        Left = 0
+        Height = 23
+        Top = 91
+        Width = 164
+        Align = alTop
+        TabOrder = 2
+        Text = '10'
+      end
+      object Label3: TLabel
+        Left = 0
+        Height = 15
+        Top = 114
+        Width = 164
+        Align = alTop
+        Caption = 'Frequency2'
+      end
+      object edFreq2: TEdit
+        Left = 0
+        Height = 23
+        Top = 129
+        Width = 164
+        Align = alTop
+        TabOrder = 3
+        Text = '10'
+      end
+      object Label4: TLabel
+        Left = 0
+        Height = 15
+        Top = 152
+        Width = 164
+        Align = alTop
+        Caption = 'Phase Shift'
+      end
+      object edPhShift: TEdit
+        Left = 0
+        Height = 23
+        Top = 167
+        Width = 164
+        Align = alTop
+        TabOrder = 4
+        Text = '10'
+      end
+      object Button1: TButton
+        Left = 0
+        Height = 25
+        Top = 215
+        Width = 164
+        Align = alTop
+        Caption = 'Start / Stop'
+        TabOrder = 5
+        OnClick = Button1Click
+      end
+      object lbGenStatus: TLabel
+        Left = 0
+        Height = 15
+        Top = 0
+        Width = 164
+        Align = alTop
+        Caption = 'Status: OFF'
+      end
+      object Button5: TButton
+        Left = 0
+        Height = 25
+        Top = 190
+        Width = 164
+        Align = alTop
+        Caption = 'Update'
+        TabOrder = 6
+        OnClick = Button5Click
+      end
+    end
+    object GroupBox2: TGroupBox
+      Left = 1
+      Height = 83
+      Top = 367
+      Width = 168
+      Align = alTop
+      AutoSize = True
+      Caption = 'Port'
+      ClientHeight = 63
+      ClientWidth = 164
+      TabOrder = 1
+      object Label6: TLabel
+        Left = 0
+        Height = 15
+        Top = 0
+        Width = 164
+        Align = alTop
+        Caption = 'Update Frequency'
+      end
+      object edUpdFreq: TEdit
+        Left = 0
+        Height = 23
+        Top = 15
+        Width = 164
+        Align = alTop
+        TabOrder = 0
+        Text = '100'
+      end
+      object Button3: TButton
+        Left = 0
+        Height = 25
+        Top = 38
+        Width = 164
+        Align = alTop
+        Caption = 'Update'
+        TabOrder = 1
+        OnClick = Button3Click
+      end
+    end
+    object GroupBox3: TGroupBox
+      Left = 1
+      Height = 98
+      Top = 450
+      Width = 168
+      Align = alTop
+      AutoSize = True
+      Caption = 'Display'
+      ClientHeight = 78
+      ClientWidth = 164
+      TabOrder = 2
+      object Label7: TLabel
+        Left = 0
+        Height = 15
+        Top = 15
+        Width = 164
+        Align = alTop
+        Caption = 'Buffer Size'
+      end
+      object edBufSize1: TEdit
+        Left = 0
+        Height = 23
+        Top = 30
+        Width = 164
+        Align = alTop
+        TabOrder = 0
+        Text = '100'
+      end
+      object Button2: TButton
+        Left = 0
+        Height = 25
+        Top = 53
+        Width = 164
+        Align = alTop
+        Caption = 'Start / Stop'
+        TabOrder = 1
+        OnClick = Button2Click
+      end
+      object lbDispStatus: TLabel
+        Left = 0
+        Height = 15
+        Top = 0
+        Width = 164
+        Align = alTop
+        Caption = 'Status: OFF'
+      end
+    end
+    object GroupBox4: TGroupBox
+      Left = 1
+      Height = 106
+      Top = 1
+      Width = 168
+      Align = alTop
+      AutoSize = True
+      Caption = 'Genrator Management'
+      ClientHeight = 86
+      ClientWidth = 164
+      TabOrder = 3
+      object Label5: TLabel
+        Left = 0
+        Height = 15
+        Top = 0
+        Width = 164
+        Align = alTop
+        Caption = 'Setup Generators'
+      end
+      object edNGens: TEdit
+        Left = 0
+        Height = 23
+        Top = 15
+        Width = 164
+        Align = alTop
+        TabOrder = 0
+        Text = '3'
+      end
+      object Button4: TButton
+        Left = 0
+        Height = 25
+        Top = 38
+        Width = 164
+        Align = alTop
+        Caption = 'Apply'
+        TabOrder = 1
+        OnClick = Button4Click
+      end
+      object cbCurrGen: TComboBox
+        Left = 0
+        Height = 23
+        Top = 63
+        Width = 164
+        Align = alTop
+        ItemHeight = 15
+        Style = csDropDownList
+        TabOrder = 2
+        OnChange = cbCurrGenChange
+      end
+    end
+  end
+  object Timer1: TTimer
+    Interval = 100
+    OnTimer = Timer1Timer
+    Left = 912
+    Top = 24
+  end
+end
